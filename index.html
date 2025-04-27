@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Quiz</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+    </style>
+</head>
+<body>
+    <!-- Dark Mode Toggle Button -->
+    <div class="dark-mode-toggle">
+        <button id="dark-mode-toggle" class="toggle-btn">
+            <span class="toggle-icon">🌙</span>
+            <span>Dark Mode</span>
+        </button>
+    </div>
+
+    <div class="container">
+        <!-- Start Screen -->
+        <div id="start-screen">
+            <h1>Python Quiz</h1>
+            <p>Test your Python knowledge with this interactive quiz. You'll have <strong>15 seconds</strong> to answer each question. Try to get as many correct as possible!</p>
+            <div class="controls">
+                <button id="start-btn" class="btn btn-primary">Start Quiz</button>
+            </div>
+        </div>
+
+        <!-- Quiz Screen -->
+        <div id="quiz-screen" class="hide">
+            <div class="quiz-header">
+                <div class="progress-info">Question <span id="current-question">1</span> of <span id="total-questions">25</span></div>
+                <div class="score-display">Score: <span id="current-score">0</span></div>
+                <div class="timer-display">Time: <span id="time-left">15</span>s</div>
+            </div>
+
+            <div class="question-container fade-in">
+                <div id="question" class="question"></div>
+                <div id="options" class="options"></div>
+                <div id="explanation" class="explanation">
+                    <div class="explanation-title">Explanation:</div>
+                    <div id="explanation-text"></div>
+                </div>
+            </div>
+
+            <div class="controls">
+                <button id="hint-btn" class="btn btn-secondary">Get Hint</button>
+                <button id="next-btn" class="btn btn-primary" disabled>Next Question</button>
+            </div>
+        </div>
+
+        <!-- Results Screen -->
+        <div id="results-screen" class="hide">
+            <h1>Quiz Results</h1>
+            <div class="result-container">
+                <div class="score-circle">
+                    <span id="percentage">80</span>%
+                </div>
+                <h2>You scored <span id="score">20</span> out of <span id="total">25</span></h2>
+                
+                <div id="feedback" class="feedback excellent">
+                    Excellent! You're a Python expert!
+                </div>
+                
+                <div class="time-spent">Time taken: <span id="time-spent">5:30</span></div>
+            </div>
+            
+            <div class="controls">
+                <button id="review-btn" class="btn btn-secondary">Review Answers</button>
+                <button id="restart-btn" class="btn btn-primary">Try Again</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+
+    <script>   </script>
+</body>
+</html>
